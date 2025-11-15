@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rider's Travel Planner — Hybrid Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body class="dark">
+  <div class="app">
+    <header class="topbar glass">
+      <div class="brand">
+        <div class="logo">🏍️</div>
+        <div class="title">TrailPilot</div>
+      </div>
+      <div class="controls">
+        <button id="themeToggle" class="icon-btn">🌙</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="leftcol">
+
+        <!-- Search Section -->
+        <section class="card glass search-card">
+          <h2>Plan a Ride</h2>
+
+          <!-- NEW INPUTS WITH ICONS -->
+          <div class="row inputs">
+            <div class="input-wrap">
+              <span class="input-icon">📍</span>
+              <input id="startInput" placeholder="Start location" autocomplete="off" />
+              <div id="startSuggest" class="suggest"></div>
+            </div>
+
+            <div class="input-wrap">
+              <span class="input-icon">🏁</span>
+              <input id="endInput" placeholder="Destination" autocomplete="off" />
+              <div id="endSuggest" class="suggest"></div>
+            </div>
+
+          </div>
+
+          <!-- NEW: FULL-WIDTH BUTTON -->
+          <button id="routeBtn" class="btn primary full-btn disabled" disabled>
+            Find Route
+          </button>
+
+          <div class="info small">
+            <div id="distance">Distance: —</div>
+            <div id="duration">Estimated time: —</div>
+          </div>
+
+          <div class="weather-row">
+            <div id="startWeather" class="weather glass">Start: —</div>
+            <div id="endWeather" class="weather glass">Destination: —</div>
+          </div>
+
+          <div id="rec" class="rec">Recommendations: —</div>
+        </section>
+
+        <!-- Summary -->
+        <section class="card glass summary-card">
+          <h3>Ride Summary</h3>
+          <ul class="summary-list">
+            <li><strong>Last Ride:</strong> <span id="lastRide">—</span></li>
+            <li><strong>Saved Rides:</strong> <span id="savedCount">0</span></li>
+            <li><strong>Favorites:</strong> <span id="favCount">0</span></li>
+          </ul>
+          <div class="save-row">
+            <input id="rideName" placeholder="Save ride as (optional)" />
+            <button id="saveRide" class="btn small">Save</button>
+          </div>
+        </section>
+
+        <!-- Saved Rides -->
+        <section class="card glass saved-card">
+          <div class="saved-header">
+            <h3>Saved Rides</h3>
+            <button id="toggleSaved" class="btn small outline">Collapse</button>
+          </div>
+          <div id="savedList" class="saved-list expanded"></div>
+        </section>
+      </aside>
+
+      <section class="maincol">
+
+        <!-- Map -->
+        <div class="map-wrap glass">
+          <div id="map" class="map"></div>
+          <button class="map-btn" id="gpsBtn">📍</button>
+          <button class="map-btn" id="recenterBtn">🎯</button>
+          <button class="map-btn" id="swapBtn">🔄</button>
+        </div>
+
+        <!-- Hotels -->
+        <div class="card glass hotels-card">
+          <h4>Nearby Hotels</h4>
+          <ul id="hotels" class="hotels-list"></ul>
+        </div>
+
+      </section>
+    </main>
+
+    <footer class="footer glass">
+      Built with ❤ • Geoapify Routing + OpenWeather
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
