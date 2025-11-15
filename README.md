@@ -5,8 +5,8 @@
 **TrailPilot** — Smart Rider’s Travel Planner: a lightweight web app for planning rides, checking weather, saving routes and viewing nearby hotels on an interactive map built with Leaflet, Geoapify and OpenWeather.
 
 ## Quick Links
-- Live demo: (add your GitHub Pages URL here)
-- Repo: (your repo URL)
+- Live demo: https://aarishhh.github.io/TrailPilot/
+- Repo: https://github.com/aarishhh/TrailPilot.git
 
 ## Features
 - Autocomplete location search (Geoapify)
