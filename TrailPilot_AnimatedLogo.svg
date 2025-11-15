@@ -1,0 +1,30 @@
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B00"/>
+      <stop offset="100%" stop-color="#FF8250"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circle background -->
+  <circle cx="90" cy="90" r="70" fill="url(#grad)">
+    <animate attributeName="r" values="68;72;68" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Road line -->
+  <path d="M30 120 Q90 40 150 120" stroke="white" stroke-width="6" fill="none" stroke-linecap="round">
+    <animate attributeName="stroke-width" values="5;7;5" dur="2s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Motorcycle icon -->
+  <text x="90" y="105" text-anchor="middle" font-size="48" fill="white" style="font-family: sans-serif;">
+    🏍️
+    <animate attributeName="opacity" values="1;0.7;1" dur="2.5s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Text -->
+  <text x="90" y="160" text-anchor="middle" font-size="22" fill="white" style="font-family: sans-serif;">
+    TrailPilot
+    <animate attributeName="letter-spacing" values="0;2;0" dur="3s" repeatCount="indefinite"/>
+  </text>
+</svg>
