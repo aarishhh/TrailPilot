@@ -1,6 +1,6 @@
 # 🚀 TrailPilot
 
-![TrailPilot Animated Logo](./trailpilot-logo.svg)
+![TrailPilot Animated Logo](./TrailPilot_Logo.svg)
 
 **TrailPilot** — Smart Rider’s Travel Planner: a lightweight web app for planning rides, checking weather, saving routes and viewing nearby hotels on an interactive map built with Leaflet, Geoapify and OpenWeather.
 
