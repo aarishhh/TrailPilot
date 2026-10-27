@@ -1,0 +1,19 @@
+# TrailPilot — .gitignore
+
+# ── Secrets & local config ────────────────────────────────────────────────────
+# config.js holds real API keys — NEVER commit it.
+# Use config.example.js as the committed template instead.
+config.js
+.env
+.env.*
+
+# ── Dependencies ──────────────────────────────────────────────────────────────
+node_modules/
+
+# ── OS / Editor noise ─────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/*
+.idea/
+*.suo
+*.sw?

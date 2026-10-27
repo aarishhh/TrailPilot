@@ -1,7 +1,8 @@
-const CONFIG = {
-  GEOAPIFY_KEY: "c8c51c2e78994627a53673d16446af31",
-  OPENWEATHER_KEY: "50467444f7e17cc0b4ab9403e447be90"
-};
+// CONFIG is loaded from config.js (see index.html) — never hardcode keys here.
+// If CONFIG is undefined, copy config.example.js → config.js and add your keys.
+if (typeof CONFIG === 'undefined') {
+  console.error('TrailPilot: CONFIG not found. Copy config.example.js → config.js and add your API keys.');
+}
 
 function el(id) { return document.getElementById(id); }
 function fmtKm(m) { return (m / 1000).toFixed(2) + " km"; }
